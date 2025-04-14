@@ -48,7 +48,7 @@ class KalliopePbx {
 
 	public function sendRequest($url, $type = 'GET', $data = null)
 	{
-		$fullUrl = $this->protocol.$this->address. $this->port  . $url;
+		$fullUrl = $this->protocol.$this->address. $this->port  .'/'.$url;
 		$header = self::setHeader();
 
 		// Mappa i metodi HTTP disponibili
