@@ -7,7 +7,7 @@ To use this package for laravel, follow the steps below:
 
 1. Install the package via Composer:
     ```bash
-    composer require fbarachino/kalliopepbx:dev-main
+    composer require fbarachino/kalliopepbx
     ```
 
 2. Publish the config file:
