@@ -19,9 +19,10 @@ To use this package for laravel, follow the steps below:
 3. Initialize and configure the library as needed (for example):
     ```php
     ...
+    use Illuminate\Support\Facades\Storage;
     use fbarachino\kalliopepbx\KalliopePbx;
     
-    class RestApiCall extends Models{
+    class RestApiCall {
 
         public static function getSerialNumber()
         {
@@ -30,6 +31,24 @@ To use this package for laravel, follow the steps below:
             return $response;
         }
        
+       // remeber to execute 'php artisan storage:link'
+        public static function backup($filename, $description)
+        {
+            $kalliope = new KalliopePbx();
+            $firmware = $kalliope->sendRequest('/rest/dashboard/firmwareVersion','GET');
+            $data = 
+            [
+                'backup'=>
+                [
+                    'filename' => $filename,
+                    'comment' => $description
+                ],
+            ];
+
+            $response = json_decode($kalliope->sendRequest('rest/backup/create/'.$firmware,'POST',$data);
+            return Storage::disk('local')->put('/public/backup/kalliope/'.$backupName.'.bak', $response);         
+        } 
+
     }
     ...
     ```
