@@ -19,7 +19,7 @@ To use this package for laravel, follow the steps below:
 3. Initialize and configure the library as needed (for example):
     ```php
     ...
-    use fbarachino/kalliopepbx/KalliopePbx;
+    use fbarachino\kalliopepbx\KalliopePbx;
     
     class RestApiCall extends Models{
 
