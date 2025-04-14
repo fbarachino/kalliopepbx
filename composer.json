@@ -1,0 +1,31 @@
+{
+    "name": "fbarachino/kalliopepbx",
+    "description": "Helper to consume Kalliope's RestAPI",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.9"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "fbarachino\\kalliopepbx\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Flavio Barachino",
+            "email": "flavio.barachino@lavorain.cloud"
+        }
+    ],
+    "minimum-stability": "stable",
+    "extra":{
+        "laravel": {
+            "providers": [
+                "fbarachino\\kalliopepbx\\KalliopePbxServiceProvider"
+            ],
+            "aliases": {
+                "KalliopePBX": "fbarachino\\kalliopepbx\\Facades\\KalliopePBX"
+            }
+        }
+    }
+}
