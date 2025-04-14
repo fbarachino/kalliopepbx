@@ -52,3 +52,10 @@ To use this package for laravel, follow the steps below:
     }
     ...
     ```
+4.  You can use the helper as:
+    ```php
+    $kalliope->sendRequest($url,$method,$data);
+    ```
+    Where ```$url``` is the URL of the API request,
+    ```$method``` is the method (GET,POST,PUT,PATCH,DELETE), and ```$data``` is the array of fields.
+    
