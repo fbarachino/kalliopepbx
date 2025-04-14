@@ -1,5 +1,5 @@
 # KalliopePbx
-Helper per utilizzare le RestAPI del Kalliope PBX
+Package per Laravel per utilizzare le RestAPI del Kalliope PBX
 
 ## Usage
 
