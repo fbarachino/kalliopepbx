@@ -1,10 +1,8 @@
 <?php
 
 namespace fbarachino\kalliopepbx;
+
 use Illuminate\Support\Facades\Http;
-
-
-   
 
 class KalliopePbx {
 
@@ -23,8 +21,8 @@ class KalliopePbx {
         $this->password = config('kalliopepbx.password');
     }
 
-    private function getSalt(){
-       
+    private function getSalt()
+	{ 
 		$response = Http::get($this->protocol.$this->address. $this->port .'/rest/salt/default',[
             'Accept' => 'application/json',
         ]);
