@@ -46,7 +46,7 @@ To use this package for laravel, follow the steps below:
             ];
 
             $response = json_decode($kalliope->sendRequest('rest/backup/create/'.$firmware,'POST',$data);
-            return Storage::disk('local')->put('/public/backup/kalliope/'.$backupName.'.bak', $response);         
+            return Storage::disk('local')->put('/public/backup/kalliope/'.$filename.'.bak', $response);         
         } 
 
     }
