@@ -7,7 +7,7 @@ To use this package for laravel, follow the steps below:
 
 1. Install the package via Composer:
     ```bash
-    composer require fbarachino/kalliopepbx
+    composer require fbarachino/kalliopepbx:dev-main
     ```
 
 2. Publish the config file:
@@ -23,7 +23,7 @@ To use this package for laravel, follow the steps below:
 
         public static function getSerialNumber()
         {
-            $kalliope = new Kalliope();
+            $kalliope = new KalliopePbx();
             $response = $kalliope->sendRequest('rest/dashboard/serialNumber','GET');
             return $response;
         }
