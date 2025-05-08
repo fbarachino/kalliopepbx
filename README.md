@@ -52,3 +52,10 @@ To use this package for laravel, follow the steps below:
     }
     ...
     ```
+    You can also instantiate it directly if you don't want to use the config/kalliopepbx.php file
+     ```php
+    ...
+         $kalliope = new KalliopePbx($address, $port, $protocol, $username, $password);
+     ...
+    ``` 
+    
