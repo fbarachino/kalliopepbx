@@ -59,7 +59,7 @@ To use this package for laravel, follow the steps below:
     Where ```$url``` is the URL of the API request,
     ```$method``` is the method (GET,POST,PUT,PATCH,DELETE), and ```$data``` is the array of fields.
     
-You can also instantiate directly if you don't want to use the config/kalliopepbx.php file:
+From version 1.0.1 you can also instantiate directly if you don't want to use the config/kalliopepbx.php file:
 ```php
 ...
 $kalliope = new KalliopePbx($address,$port,$protocol,$username,$password);
