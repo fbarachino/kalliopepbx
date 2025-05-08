@@ -12,14 +12,38 @@ class KalliopePbx {
     private $username;
     private $password;
 
-    public function __construct()
-    {
-        $this->address = config('kalliopepbx.address');
-        $this->port = config('kalliopepbx.port');
-        $this->protocol = config('kalliopepbx.protocol');
-        $this->username = config('kalliopepbx.username');
-        $this->password = config('kalliopepbx.password');
-    }
+    public function __construct($address = null, $port = null, $protocol = null, $username = null, $password = null)
+	{
+		if ($address) {
+			$this->address = $address;
+		} else {
+			$this->address = config('kalliopepbx.address');
+		}
+
+		if ($port) {
+			$this->port = $port;
+		} else {
+			$this->port = config('kalliopepbx.port');
+		}
+
+		if ($protocol) {
+			$this->protocol = $protocol;
+		} else {
+			$this->protocol = config('kalliopepbx.protocol');
+		}
+
+		if ($username) {
+			$this->username = $username;
+		} else {
+			$this->username = config('kalliopepbx.username');
+		}
+
+		if ($password) {
+			$this->password = $password;
+		} else {
+			$this->password = config('kalliopepbx.password');
+		}
+	}
 
     private function getSalt()
 	{ 
